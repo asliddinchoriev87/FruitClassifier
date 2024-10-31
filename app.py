@@ -4,6 +4,14 @@ import pathlib
 import plotly.express as px
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
+from pathlib import Path
+import torch
+
+def map_location(storage, loc):
+    return storage
+
+model = load_learner('fruit_model.pkl', cpu=True, map_location=map_location)
+
 
 
 # Title
