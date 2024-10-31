@@ -10,7 +10,7 @@ import torch
 def map_location(storage, loc):
     return storage
 
-model = load_learner('fruit_model.pkl', cpu=True, map_location=map_location)
+
 
 
 
@@ -33,7 +33,7 @@ if file:
     img = PILImage.create(file)
 
     #model
-    model = load_learner('fruit_model.pkl')
+    model = load_learner('fruit_model.pkl', cpu=True, map_location=map_location)
 
     st.balloons()
 
